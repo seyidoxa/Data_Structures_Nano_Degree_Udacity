@@ -10,14 +10,14 @@ def sqrt(number):
         print("Invalid Input")
         return
 
-    if number == 0 or number == 1:
+    if number == 0 or number ==1:
         return number
 
     start = 1
-    end = number
+    stop = number
 
-    while start <= end:
-        mid = (start + end) // 2
+    while start <= stop:
+        mid = (start + stop) // 2
         mid_squared = mid * mid
 
         if mid_squared == number:
@@ -27,25 +27,20 @@ def sqrt(number):
             start = mid + 1
             ans = mid
         else:
-            end = mid - 1
+            stop = mid - 1
     return ans
 
 
-# ----------------------------------------------------------------------------------------------------------------------
-# Tests
-# ----------------------------------------------------------------------------------------------------------------------
+# Test Cases
+
+print("Pass" if (3 == sqrt(9)) else "Fail")
+print("Pass" if (0 == sqrt(0)) else "Fail")
+print("Pass" if (4 == sqrt(16)) else "Fail")
+print("Pass" if (1 == sqrt(1)) else "Fail")
+print("Pass" if (5 == sqrt(27)) else "Fail")
 
 # Invalid Type Test
 print("Pass" if (sqrt(None) is None) else "Fail")
-
-# Edge Case Test
-print("Pass" if (0 == sqrt(0)) else "Fail")
-print("Pass" if (1 == sqrt(1)) else "Fail")
-
-# Regular Test
-print("Pass" if (3 == sqrt(9)) else "Fail")
-print("Pass" if (4 == sqrt(16)) else "Fail")
-print("Pass" if (5 == sqrt(27)) else "Fail")
 
 # Large Number Test
 print("Pass" if (9999 == sqrt(99999999)) else "Fail")
