@@ -1,4 +1,5 @@
-def rotated_array_search(input_list, number):
+def rotated_array_search(input_list, number, start = 0, end = 0):
+
     """
     Find the index by searching in a rotated sorted array
     Args:
@@ -6,13 +7,8 @@ def rotated_array_search(input_list, number):
     Returns:
        int: Index or -1
     """
-    return rotated_array_search_recursive(input_list,
-                                          number,
-                                          0,
-                                          len(input_list) - 1)
 
-
-def rotated_array_search_recursive(input_list, number, start, end):
+    end = len(input_list) - 1
 
     if start > end:
         return -1
@@ -26,21 +22,21 @@ def rotated_array_search_recursive(input_list, number, start, end):
     if input_list[start] <= mid_element:
 
         if mid_element > number and input_list[start] <= number:
-            return rotated_array_search_recursive(input_list,
+            return rotated_array_search(input_list,
                                                   number,
                                                   start,
                                                   mid_index - 1)
-        return rotated_array_search_recursive(input_list,
+        return rotated_array_search(input_list,
                                               number,
                                               mid_index + 1,
                                               end)
 
     if mid_element < number and input_list[end] >= number:
-        return rotated_array_search_recursive(input_list,
+        return rotated_array_search(input_list,
                                               number,
                                               mid_index + 1,
                                               end)
-    return rotated_array_search_recursive(input_list,
+    return rotated_array_search(input_list,
                                           number,
                                           start,
                                           mid_index - 1)
@@ -52,10 +48,7 @@ def linear_search(input_list, number):
             return index
     return -1
 
-# ----------------------------------------------------------------------------------------------------------------------
 # Tests
-# ----------------------------------------------------------------------------------------------------------------------
-
 
 def test_function(test_case):
     input_list = test_case[0]

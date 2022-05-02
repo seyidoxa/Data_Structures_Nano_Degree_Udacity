@@ -9,7 +9,7 @@ class MaxHeap:
             newArray[:len(self.cbt)] = self.cbt
             self.cbt = newArray
         self.cbt[self.next_index] = data
-        self._up_heapify()
+        self.up_heapify()
         self.next_index += 1
 
     def remove(self):
@@ -23,11 +23,11 @@ class MaxHeap:
         self.cbt[0] = last_element
 
         self.cbt[self.next_index] = None
-        self._down_heapify()
+        self.down_heapify()
 
         return to_remove
 
-    def _up_heapify(self):
+    def up_heapify(self):
         child_index = self.next_index
 
         while child_index >= 1:
@@ -42,7 +42,7 @@ class MaxHeap:
             else:
                 break
 
-    def _down_heapify(self):
+    def down_heapify(self):
         parent_index = 0
 
         while parent_index < self.next_index:
@@ -122,9 +122,7 @@ def test_function(test_case):
     else:
         print("Fail")
 
-# ----------------------------------------------------------------------------------------------------------------------
 # Tests
-# ----------------------------------------------------------------------------------------------------------------------
 
 # Default
 test_function([[1, 2, 3, 4, 5], [542, 31]])

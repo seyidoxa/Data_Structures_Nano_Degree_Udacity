@@ -1,6 +1,5 @@
 from collections import defaultdict
 
-
 class RouteTrie:
     def __init__(self, handler):
         self.root = RouteTrieNode(handler)
@@ -56,9 +55,7 @@ class Router:
 router = Router("root handler", "not found handler")
 router.add_handler("/home/about", "about handler")  # add a route
 
-# ----------------------------------------------------------------------------------------------------------------------
 # Tests
-# ----------------------------------------------------------------------------------------------------------------------
 
 # Root Handler
 assert(router.lookup("/") == "root handler")

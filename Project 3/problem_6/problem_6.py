@@ -1,6 +1,5 @@
 import random
 
-
 def get_min_max(ints):
     """
     Return a tuple(min, max) out of list of unsorted integers.
@@ -21,9 +20,7 @@ def get_min_max(ints):
 
     return (min, max)
 
-# ----------------------------------------------------------------------------------------------------------------------
 # Tests
-# ----------------------------------------------------------------------------------------------------------------------
 
 # Example Test Case of Ten Integers
 

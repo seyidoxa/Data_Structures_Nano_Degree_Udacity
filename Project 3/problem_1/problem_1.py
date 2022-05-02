@@ -7,7 +7,6 @@ def sqrt(number):
        int: Floored Square Root
     """
     if not isinstance(number, int):
-        print("Invalid Input")
         return
 
     if number == 0 or number ==1:
