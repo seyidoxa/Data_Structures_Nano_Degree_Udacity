@@ -1,0 +1,5 @@
+Since the number of groups is not definite, I used recursion for problem. 
+I used the OR operator on the output so it only takes one call to report True for the output to be True.
+
+Time complextity -  O(n)
+Space complexity - O(1)

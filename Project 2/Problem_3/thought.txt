@@ -1,0 +1,10 @@
+ A min heap was considered to allow for easy merging of the frequency nodes. 
+ Pythons heapq library was used to make the addition and removal of nodes easier.
+
+Time Complexities
+encode() method - O(nlogn)
+decode() method - O(n)
+
+Space Complexities
+encode() method - O(n)
+decode() method - O(1)

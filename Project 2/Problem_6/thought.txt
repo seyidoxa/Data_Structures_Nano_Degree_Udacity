@@ -1,0 +1,11 @@
+I created a deep copy of both lists to calculate the union . The end of the first list is then pointed to the start of the second.
+For the intersecion, I used a hash map with the key being the node value and the value being the number of occurences.
+With the first list, I populated the hash map and then iterated through the second to find matches.
+
+Time complexities
+union - O(n)
+Intersection - O(n)
+
+Space complexities
+union - O(n)
+Intersection - O(n)
