@@ -1,0 +1,11 @@
+Cached values were stored in a hash map for instant retrieval of the node and value.
+Doubly linked list was used to track of the most recently used values and size. 
+This allowed me to quickly set the head(most recently used) and pop that back for removal.
+
+Time Complexities:
+get() method - O(1) 
+set() method - 0(1)
+
+Space Complexities
+get() method - O(1) 
+set() method - 0(n)

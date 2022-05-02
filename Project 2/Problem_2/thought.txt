@@ -1,0 +1,4 @@
+Since the depth of the file structure is not known, I thought it would be best to use recursion for this problem. 
+
+Time complexity: O(n) 
+Space complexity: O(n) 

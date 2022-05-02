@@ -1,0 +1,4 @@
+I used a class named Blockchain which contains a method "add_block". This method updates the current block.
+
+Time complextity (add_block) - O(1)
+Space complexity (add_block) - O(1) 
